@@ -32,6 +32,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
 
+### Local Secrets
+
+In order to run the application locally, you will need to use some set of secrets not in the repo. Contact a maintainer for the secrets and add them to a `.env.local` file in the root of the project.
+
+Required secrets:
+
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+CLERK_SECRET_KEY
+NEXT_PUBLIC_CLERK_SIGN_IN_URL
+```
+
 ## Documentation Links
 
 To learn more about our dependencies, take a look at the following resources:
@@ -41,3 +53,8 @@ To learn more about our dependencies, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 - [Tailwind CSS __V3__](https://v3.tailwindcss.com/) - learn about Tailwind CSS (CSS framework).
+- [Clerk (Authentication)](https://clerk.com/docs/quickstart/nextjs) - learn about Clerk (Authentication).
+
+## Authentication
+
+This project uses [Clerk](https://clerk.com/docs/quickstart/nextjs) for authentication. Clerk is a similar platform to other authentication services like Auth0 except for that it was built for first-class server-side authentication rather than client-side SPA flows.
