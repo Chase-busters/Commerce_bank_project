@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:start": "docker-compose up -d",
+    "db:stop": "docker-compose down",
+    "db:setup": "bash ./db/setup-db.sh"
   },
   "dependencies": {
     "react": "^19.0.0",
