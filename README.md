@@ -32,6 +32,24 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
 
+To create a local test database, install docker then run:
+
+```bash
+bun run db:start
+```
+
+Make sure that db/setup-db.sh is executable:
+
+```bash
+chmod +x ./db/setup-db.sh
+```
+
+To populate database with test data:
+
+```bash
+bun run db:setup
+```
+
 ## Documentation Links
 
 To learn more about our dependencies, take a look at the following resources:
