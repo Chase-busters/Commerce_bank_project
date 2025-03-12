@@ -3,24 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "flask-dev": "FLASK_DEBUG=1 pip3 install -r requirements.txt && python3 -m flask --app api/index run -p 5328",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "create-venv": "python3 -m venv .venv",
+    "lint": "next lint",
+    "db:start": "docker-compose up -d",
+    "db:stop": "docker-compose down",
+    "db:setup": "bash ./db/setup-db.sh"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.479.0",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7",
     "next": "15.1.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "tailwind-merge": "^3.0.2",
-    "tailwindcss-animate": "^1.0.7"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.0.12",
+    "@tailwindcss/postcss": "^4.0.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
