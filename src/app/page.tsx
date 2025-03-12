@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SignOutButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -12,6 +13,11 @@ export default function Home() {
           height={38}
           priority
         />
+        <SignOutButton redirectUrl="./sign-in">
+        <button className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 px-4">
+              Sign Out
+            </button>
+        </SignOutButton>
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
             Get started by editing{" "}
